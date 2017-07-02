@@ -1,0 +1,12 @@
+<h1>
+    {{ 'Server' }} with serverId = {{ getServerId() }} is {{ getServerStatus() }}
+    <br />
+    <input type="text" (input)="updateUsername($event)" (onchange)="textAreaEmptyCheck()">
+    <input type="text" (input)="updatePassword($event)" (onchange)="textAreaEmptyCheck()">
+    <br />
+    <button class="btn btn-primary" 
+        [disabled]="!allowNewServer"
+        > Add server </button>
+    <p> {{ serverRegistrationStatus }} </p> <br/>
+    <h1> {{ username }}</h1> 
+</h1>
